@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+
+.form {
+  background-color: #fff;
+  align-self: center;
+  padding: 4rem;
+  border-radius: 1rem;
+  display: grid;
+  row-gap: 2rem;
+
+  &__title {
+    background-color: $color-accent-blue;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-radius: 5px;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  &__title span {
+    font-weight: 700;
+  }
+
+  &__terms {
+    color: $color-neutral-grayish-blue;
+    font-size: 1.2rem;
+  }
+
+  &__terms span {
+    color: $color-primary-red;
+    margin-left: 5px;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.intro {
+  max-width: 50rem;
+  color: #fff;
+
+  &__title {
+    font-size: 4rem;
+    margin-bottom: 4.5rem;
+    line-height: 5rem;
+  }
+}

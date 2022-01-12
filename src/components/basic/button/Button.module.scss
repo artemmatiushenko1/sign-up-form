@@ -1,0 +1,36 @@
+@import '../../../styles/variables';
+
+.button {
+  border: none;
+  position: relative;
+  overflow: hidden;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: $color-primary-green;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2rem 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: darken($color-primary-green, 5%);
+  }
+
+  &:hover {
+    background-color: lighten($color-primary-green, 5%);
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}
