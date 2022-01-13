@@ -3,8 +3,8 @@ import classes from './Intro.module.scss';
 
 const Intro = () => {
   return (
-    <header class={classes.intro}>
-      <h1 class={classes.intro__title}>Learn to code by watching others</h1>
+    <header className={classes.intro}>
+      <h1 className={classes.intro__title}>Learn to code by watching others</h1>
       <p className={classes.intro__description}>
         See how experienced developers solve problems in real-time. Watching
         scripted tutorials is great, but understanding how developers think is

@@ -12,4 +12,9 @@
   justify-content: center;
   column-gap: 7rem;
   overflow-x: hidden;
+
+  @media only screen and (max-width: 68.75em) {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
 }

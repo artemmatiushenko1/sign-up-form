@@ -3,8 +3,16 @@ import Wrapper from '../../helpers/Wrapper';
 import Label from '../label/Label';
 import classes from './Input.module.scss';
 
-const Input = ({ type, placeholder, value, isValid }) => {
-  const classNames = `${classes.input}`;
+const Input = ({
+  type,
+  placeholder,
+  value,
+  isInvalid,
+  onChange,
+  onBlur,
+  errorMessage,
+}) => {
+  const classNames = `${classes.input} ${isInvalid ? classes.invalid : ''}`;
 
   return (
     <Wrapper>
@@ -13,8 +21,10 @@ const Input = ({ type, placeholder, value, isValid }) => {
         className={classNames}
         placeholder={placeholder}
         value={value}
+        onChange={onChange}
+        onBlur={onBlur}
       />
-      {/* <Label>Password can't be empty</Label> */}
+      {isInvalid && <Label>{errorMessage}</Label>}
     </Wrapper>
   );
 };
