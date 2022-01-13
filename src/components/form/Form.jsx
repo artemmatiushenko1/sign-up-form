@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classes from './Form.module.scss';
 import Button from '../basic/button/Button';
 import Input from '../basic/input/Input';
 import Wrapper from '../helpers/Wrapper';
 import Card from '../helpers/Card';
 import useInput from '../../hooks/use-input';
+import Notification from '../notification/Notification';
 
 const Form = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const {
     value: firstName,
     reset: resetFirstName,
@@ -58,6 +61,11 @@ const Form = () => {
     ) {
       return;
     }
+
+    setIsSubmitted(true);
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 1000);
 
     restForm();
   };
@@ -125,6 +133,7 @@ const Form = () => {
           </p>
         </form>
       </Card>
+      {isSubmitted && <Notification message="The form was submitted!" />}
     </Wrapper>
   );
 };

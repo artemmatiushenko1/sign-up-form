@@ -1,8 +1,8 @@
 @import '../styles/variables';
 
 .app {
-  width: 100vw;
-  height: 100vh;
+  max-width: 100%;
+  min-height: 100vh;
   background-color: $color-primary-red;
   background-image: url('../assets/images/bg-intro-desktop.png');
   background-position: center;
@@ -11,10 +11,10 @@
   align-items: center;
   justify-content: center;
   column-gap: 7rem;
-  overflow-x: hidden;
 
   @media only screen and (max-width: 68.75em) {
     flex-direction: column;
     row-gap: 2rem;
+    padding: 2rem;
   }
 }

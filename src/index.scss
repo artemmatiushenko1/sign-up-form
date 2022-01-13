@@ -3,6 +3,10 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+
+  @media only screen and (max-width: 28.75em) {
+    font-size: 60%;
+  }
 }
 
 *,

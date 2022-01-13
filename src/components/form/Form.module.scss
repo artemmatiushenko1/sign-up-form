@@ -10,6 +10,11 @@
   position: relative;
   overflow: hidden;
 
+  @media only screen and (max-width: 28.75em) {
+    padding: 3rem;
+    text-align: center;
+  }
+
   &__title {
     background-color: $color-accent-blue;
     color: #fff;
@@ -32,6 +37,7 @@
   }
 
   &__terms span {
+    display: inline-block;
     color: $color-primary-red;
     margin-left: 5px;
     font-weight: 600;
