@@ -1,14 +1,21 @@
 import React from 'react';
+import Wrapper from '../../helpers/Wrapper';
+import Label from '../label/Label';
 import classes from './Input.module.scss';
 
-const Input = ({ type, placeholder, value }) => {
+const Input = ({ type, placeholder, value, isValid }) => {
+  const classNames = `${classes.input}`;
+
   return (
-    <input
-      type={type}
-      className={classes.input}
-      placeholder={placeholder}
-      value={value}
-    />
+    <Wrapper>
+      <input
+        type={type}
+        className={classNames}
+        placeholder={placeholder}
+        value={value}
+      />
+      {/* <Label>Password can't be empty</Label> */}
+    </Wrapper>
   );
 };
 

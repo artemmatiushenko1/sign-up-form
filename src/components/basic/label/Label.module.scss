@@ -1,0 +1,10 @@
+@import '../../../styles/variables';
+
+.label {
+  display: block;
+  color: $color-primary-red;
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: right;
+  margin-top: 8px;
+}
